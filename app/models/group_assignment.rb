@@ -1,6 +1,8 @@
 class GroupAssignment < ActiveRecord::Base
   include GitHubPlan
 
+  update_index('stafftools#group_assignment') { self }
+
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 
